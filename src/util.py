@@ -26,7 +26,7 @@ def load_dataset(csv_path,label_col='y', add_intercept=False):
     
     #Open csv file and assign headers
     with open(csv_path, 'r') as csv_fh:
-        headers = csv_fh.readline().strip.split(',')
+        headers = csv_fh.readline().strip().split(',')
         #'r' means to open the file in read-only form
         #The very first line of the file is read and the names of the columns are stored in the header array(without the commas)
 

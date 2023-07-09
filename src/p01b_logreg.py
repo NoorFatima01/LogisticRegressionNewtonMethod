@@ -20,7 +20,8 @@ def main(train_path, eval_path, pred_path):
     log_reg.fit(x_train,y_train)
     prediction = log_reg.predict(x_valid)
 
-    
+    util.plot(x_train, y_train, log_reg.theta, 'output/p01b_{}.png'.format(pred_path[-5]))
+    np.savetxt(pred_path, prediction > 0.5, fmt='%d')
 
 
 class LogisticRegression(LinearModel):
