@@ -67,6 +67,8 @@ def plot(x,y,theta,save_path=None,correction=1.0):
     plt.plot(x[y==0, -2], x[y==0, -1], 'go', linewidth=2)
     # x[y == 1, -2] selects the values from the second-to-last column (-2) of the x array where the corresponding elements in the y array are equal to 1.
     #WHAT DOES LINEWIDTH SPECIFY????
+    #PLOT THE SIGMOID FUNCTION ITSELF
+    
 
 
     #CLARIFICATION FOR THE DECISION BOUNDARY 

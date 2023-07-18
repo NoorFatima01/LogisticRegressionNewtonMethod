@@ -22,6 +22,8 @@ def main(train_path, eval_path, pred_path):
 
     util.plot(x_train, y_train, log_reg.theta, 'output/p01b_{}.png'.format(pred_path[-5]))
     np.savetxt(pred_path, prediction > 0.5, fmt='%d')
+    util.plot(x_valid, y_valid, log_reg.theta, 'output/evalp01b_{}.png'.format(pred_path[-5]))
+
 
 
 class LogisticRegression(LinearModel):
@@ -68,7 +70,7 @@ class LogisticRegression(LinearModel):
             self.theta = new_theta(self.theta, grad_, hessian_)
             diff = np.linalg.norm(self.theta-old_theta, ord=1) < self.eps
         #Norm of a vector: A vector norm, also known as a vector length or vector magnitude, is a mathematical function that assigns a non-negative value to a vector.
-            #There are norms of different order. Norm of order 1 is L1 Norm. It adds the absolute value of all elements of a vector.
+        #There are norms of different order. Norm of order 1 is L1 Norm. It adds the absolute value of all elements of a vector.
 
         # *** END CODE HERE ***
 
