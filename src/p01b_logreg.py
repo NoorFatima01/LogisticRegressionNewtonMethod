@@ -45,7 +45,7 @@ class LogisticRegression(LinearModel):
         # *** START CODE HERE ***
 
         m,n = x.shape
-        #m is the number of training examples
+        #m is the number of samples
         #n is the number of features. Number of features == Number of Parameters (including the intercept column of 1)
 
         #If theta does not have any specific initial value, we will use zero vector with the dimensions of Number of features.
